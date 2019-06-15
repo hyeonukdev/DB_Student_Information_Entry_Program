@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.539
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "학생정보입력프로그램", "학생정보입력프로그램\학생정보입력프로그램.csproj", "{C92BBBB8-50B5-45CD-A9DB-0A4E9FCF16A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xLocalDB", "xLocalDB\xLocalDB.csproj", "{6ED346A0-2CEB-4FA3-BA11-1BF2E1E85F3C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C92BBBB8-50B5-45CD-A9DB-0A4E9FCF16A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C92BBBB8-50B5-45CD-A9DB-0A4E9FCF16A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C92BBBB8-50B5-45CD-A9DB-0A4E9FCF16A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C92BBBB8-50B5-45CD-A9DB-0A4E9FCF16A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6ED346A0-2CEB-4FA3-BA11-1BF2E1E85F3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ED346A0-2CEB-4FA3-BA11-1BF2E1E85F3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ED346A0-2CEB-4FA3-BA11-1BF2E1E85F3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ED346A0-2CEB-4FA3-BA11-1BF2E1E85F3C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F3F8ADA3-D192-4347-8603-9B922F96EA9F}
+	EndGlobalSection
+EndGlobal

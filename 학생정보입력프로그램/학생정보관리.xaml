@@ -1,0 +1,62 @@
+﻿<Window x:Class="학생정보입력프로그램.학생정보관리"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:학생정보입력프로그램"
+        mc:Ignorable="d"
+        Title="학생정보관리 16515002 강현욱" Height="500" Width="700" WindowStartupLocation="Manual" ResizeMode="NoResize">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ComboBox Name="cbx_학과선택" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Width="200" Height="40" SelectionChanged="Cbx_학과선택_SelectionChanged" FontSize="22"/>
+        <DataGrid Name="dataGrid_정보" ItemsSource="{Binding 학번}" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.RowSpan="7" Grid.Column="0" Width="200" Height="270" SelectionChanged="DataGrid_정보_SelectionChanged" FontSize="16" CanUserAddRows="False" IsReadOnly="True"/>
+        <Button Name="btn_닫기" Content="닫기" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="9" Grid.RowSpan="2" Grid.Column="0" Width="200" Height="40" FontSize="20" Click="Btn_닫기_Click"/>
+
+        <Button Name="btn_추가" Content="추가" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="0" Grid.Column="2" Width="120" Height="35" FontSize="20" Margin="0,0,20,0" Click="Btn_추가_Click"/>
+
+        <Label Name="lbl_학번" Content="학번 : " HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Grid.Row="1" Grid.Column="1" Width="150" Height="35" FontSize="20"/>
+        <TextBox Name="txtBox_학번" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1" Grid.Column="2" Width="230" Height="30" FontSize="20"/>
+        <Label Name="lbl_이름" Content="이름 : " HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Grid.Row="2" Grid.Column="1" Width="150" Height="35" FontSize="20"/>
+        <TextBox Name="txtBox_이름" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="2" Grid.Column="2" Width="230" Height="30" FontSize="20"/>
+        <Label Name="lbl_비밀번호" Content="비밀번호 : " HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Grid.Row="3" Grid.Column="1" Width="150" Height="35" FontSize="20"/>
+        <TextBox Name="txtBox_비밀번호" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="3" Grid.Column="2" Width="230" Height="30" FontSize="20"/>
+        <PasswordBox Name="psBox_비밀번호" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="3" Grid.Column="2" Width="230" Height="30" FontSize="20" Visibility="Hidden"/>
+        
+        <Label Name="lbl_비밀번호_확인" Content="비밀번호 확인 : " HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Grid.Row="4" Grid.Column="1" Width="150" Height="35" FontSize="20"/>
+        <PasswordBox Name="txtBox_비밀번호_확인" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="4" Grid.Column="2" Width="230" Height="30" FontSize="20"/>
+        <Label Name="lbl_학과" Content="학과 : " HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Grid.Row="5" Grid.Column="1" Width="150" Height="35" FontSize="20"/>
+        <ComboBox Name="cbx_학과입력" ItemsSource="{Binding 학과}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="5" Grid.Column="2" Width="230" Height="30" FontSize="20"/>
+        <Label Name="lbl_상태" Content="상태 : " HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Grid.Row="6" Grid.Column="1" Width="150" Height="35" FontSize="20"/>
+        <ComboBox Name="cbx_상태입력" ItemsSource="{Binding 상태}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="6" Grid.Column="2" Width="230" Height="30" FontSize="20"/>
+        <Label Name="lbl_주소" Content="주소 : " HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Grid.Row="7" Grid.Column="1" Width="150" Height="35" FontSize="20"/>
+        <TextBox Name="txtBox_주소" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="7" Grid.Column="2" Width="230" Height="30" FontSize="20"/>
+        <Label Name="lbl_이메일" Content="이메일 : " HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Grid.Row="8" Grid.Column="1" Width="150" Height="35" FontSize="20"/>
+        <TextBox Name="txtBox_이메일" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="8" Grid.Column="2" Width="230" Height="30" FontSize="20"/>
+        <Label Name="lbl_전화" Content="전화 : " HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Grid.Row="9" Grid.Column="1" Width="150" Height="35" FontSize="20"/>
+        <TextBox Name="txtBox_전화" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="9" Grid.Column="2" Width="230" Height="30" FontSize="20"/>
+
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="10" Grid.Column="2" Width="230" Orientation="Horizontal">
+            <Button x:Name="btn_확인" Content="확인" FontSize="20" Width="60" Margin="0,0,25,0" Click="Btn_확인_Click"/>
+            <Button x:Name="btn_삭제" Content="삭제" FontSize="20" Width="60" Margin="0,0,25,0" Click="Btn_삭제_Click"/>
+            <Button x:Name="btn_취소" Content="취소" FontSize="20" Width="60" Click="Btn_취소_Click"/>
+        </StackPanel>
+        
+    </Grid>
+</Window>

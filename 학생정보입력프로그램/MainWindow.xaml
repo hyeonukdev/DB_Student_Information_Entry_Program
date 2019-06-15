@@ -1,0 +1,27 @@
+﻿<Window x:Class="학생정보입력프로그램.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:학생정보입력프로그램"
+        mc:Ignorable="d"
+        Title="수강관리 15615002 강현욱" Height="300" Width="250" ResizeMode="NoResize">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button Name="btn_학생정보관리" Content="학생정보관리" HorizontalAlignment="Center"  VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" Width="180" Height="35" FontSize="20" Click="Btn_학생정보관리_Click"/>
+        <Button Name="btn_강사정보관리" Content="강사정보관리" HorizontalAlignment="Center"  VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" Width="180" Height="35" FontSize="20"/>
+        <Button Name="btn_교과목관리" Content="교과목관리" HorizontalAlignment="Center"  VerticalAlignment="Center" Grid.Column="0" Grid.Row="2" Width="180" Height="35" FontSize="20"/>
+        <Button Name="btn_교육과정관리" Content="교육과정관리" HorizontalAlignment="Center"  VerticalAlignment="Center" Grid.Column="0" Grid.Row="3" Width="180" Height="35" FontSize="20"/>
+        <Button Name="btn_개설과목관리" Content="개설과목관리" HorizontalAlignment="Center"  VerticalAlignment="Center" Grid.Column="0" Grid.Row="4" Width="180" Height="35" FontSize="20"/>
+        <Button Name="btn_수강신청관리" Content="수강신청관리" HorizontalAlignment="Center"  VerticalAlignment="Center" Grid.Column="0" Grid.Row="5" Width="180" Height="35" FontSize="20"/>
+        <Label Name="강현욱" Content="made by 강현욱 15615002" Grid.Column="0" Grid.Row="6" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="16"/>
+    </Grid>
+</Window>
